@@ -1,0 +1,26 @@
+footer{
+    grid-column: span 1;
+    padding: 30px;
+    text-align: left;
+    font-size: 22px;
+    background-color:rgb(53, 53, 53);
+    color: white;
+    line-height: 30px;
+    text-decoration: none;
+
+    h4{
+        width: 100px;
+        height: 17px;
+        margin-bottom: 20px;
+        color: white;
+        font-weight: bold;
+        font-family: shrikhand, cursive;
+        font-size: larger;
+        margin-top: 0px;
+        text-decoration: none;
+        
+    }
+    span{
+        margin-left: 10px;
+    }
+}

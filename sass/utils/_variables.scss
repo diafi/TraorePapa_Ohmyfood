@@ -9,5 +9,7 @@ $gardient-explore:linear-gradient( #FF79DA, #9356DC);
     display: flex;
     justify-content: center;
     align-items: center;
-    
+}
+@mixin box-shadow{
+    box-shadow: 2px 1 px 8px -3px #000;
 }
