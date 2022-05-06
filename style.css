@@ -238,13 +238,102 @@ footer span {
   border-radius: 40px;
   align-items: center;
   background: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: 5px 5px 3px lightgray;
   margin: 15px;
+}
+.container-grid main .resto .command button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
 }
 .container-grid footer {
   width: 100%;
 }
 
-@media screen and (min-width: 769px) and (max-width: 1470px) {
+@media screen and (min-width: 993px) and (max-width: 1430px) {
+  .container-grid {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+  }
+  .container-grid main {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .container-grid main .resto {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .container-grid main .resto .menus {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-left: 0;
+    padding-top: 80px;
+  }
+  .container-grid main .resto .menus .menu-standard {
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .container-grid main .resto .menus .menu-standard h2 {
+    text-align: left;
+  }
+  .container-grid main .resto .menus .menu-standard .list-menus {
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 30px;
+    margin: 0;
+  }
+  .container-grid main .resto .menus .menu-standard .list-menus .entrance {
+    width: 100%;
+    height: 140px;
+    font-size: medium;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .container-grid main .resto .menus .menu-standard .list-menus .entrance .text-restaurant {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 50px 50px 50px 0;
+  }
+  .container-grid main .resto .menus .menu-standard .list-menus .entrance .text-restaurant h3 {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-left: 10px;
+  }
+  .container-grid main .resto .menus .menu-standard .list-menus .entrance .text-restaurant p {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-left: 10px;
+  }
+  .container-grid main .resto .menus .menu-standard .list-menus .entrance .price {
+    margin-left: auto;
+    padding: 15px 0 45px 15px;
+    font-weight: 900;
+    display: flex;
+    align-items: flex-end;
+  }
+  .container-grid main .resto .menus .menu-standard .list-menus .entrance .check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #99E2D0;
+    margin-right: -65px;
+    width: 65px;
+    height: 140px;
+    border-radius: 0 20px 20px 0;
+    transition: all 0.5s;
+    flex-shrink: 0;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 992px) {
   .container-grid {
     display: flex;
     flex-direction: column;
@@ -515,17 +604,23 @@ footer span {
   padding-bottom: 50px;
 }
 .container-grid main .description .presentation button {
-  border: 0;
+  border: none;
   line-height: 2.5;
   padding: 0 20px;
-  font-size: 22px;
+  font-size: 25px;
   text-align: center;
   color: #fff;
   text-shadow: 1px 1px 1px #000;
-  border-radius: 40px;
-  align-items: center;
-  background: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 50px;
+  align-self: center;
   margin: 15px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: 5px 5px 10px -3px lightgray;
+  width: 400px;
+}
+.container-grid main .description .presentation button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
 }
 .container-grid main .working {
   padding: 40px;
@@ -546,6 +641,9 @@ footer span {
   height: auto;
   gap: 30px;
 }
+.container-grid main .working .working-choice:hover .button-choice {
+  background-color: linear-gradient(#FF79DA, #9356DC);
+}
 .container-grid main .working .working-choice .button-choice {
   display: flex;
   align-items: center;
@@ -557,6 +655,16 @@ footer span {
   margin-bottom: 30px;
   border-radius: 30px;
   background-color: #F2F2F2;
+  box-shadow: 5px 5px 5px lightgrey;
+}
+.container-grid main .working .working-choice .button-choice:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+.container-grid main .working .working-choice .button-choice:hover .fa-solid {
+  opacity: 1;
+  transform: scale(1.2);
+  color: #FF79DA;
 }
 .container-grid main .working .working-choice .button-choice h3 {
   font-size: medium;

@@ -50,19 +50,25 @@
                 padding-bottom: 50px;
                 
                 button{
-                    border: 0;
+                    border: none;
                     line-height: 2.5;
                     padding: 0 20px;
-                    font-size: 22px;
+                    font-size: 25px;
                     text-align: center;
                     color: #fff;
                     text-shadow: 1px 1px 1px #000;
-                    border-radius: 40px;
-                    align-items: center;
-                    background: linear-gradient( #FF79DA, #9356DC);
+                    border-radius: 50px;
+                    align-self: center;
                     margin: 15px;
-                  
-                }
+                    background: $gardient-explore;
+                    box-shadow : 5px 5px 10px -3px lightgray;
+                    width: 400px;
+
+                    &:hover{
+                        transform: scale(1.02);
+                        opacity: 0.9;
+                    }  
+                }         
             }
         }
         .working{
@@ -84,6 +90,10 @@
                 height: auto;
                 gap: 30px;
 
+                &:hover .button-choice{
+                    background-color: $gardient-explore;
+                }
+
                 .button-choice{
                     display: flex;
                     align-items: center;
@@ -95,7 +105,23 @@
                     margin-bottom: 30px;
                     border-radius: 30px;
                     background-color: #F2F2F2;
-             
+                    box-shadow : 5px 5px 5px lightgrey;
+
+                    &:hover{
+                        transform: scale(1.02);
+                        opacity: 0.9;
+                    }  
+                    
+                                
+
+                    &:hover .fa-solid{
+                        opacity: 1;
+                        transform:scale(1.2) ;
+                        color: #FF79DA;
+                        
+                    }
+                    
+                             
                     h3{
                         font-size: medium;
                         text-align: right;

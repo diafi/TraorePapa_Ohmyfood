@@ -101,9 +101,10 @@
                         margin: 10px;
 
                         h2{
-                        margin-left: 10px;
-                        border-bottom: solid 40px $color-secondary;
+                            margin-left: 10px;
+                                                
                         }
+                                            
 
                         .list-menus{
                             align-items: center;
@@ -212,8 +213,14 @@
                     text-shadow: 1px 1px 1px #000;
                     border-radius: 40px;
                     align-items: center;
-                    background: linear-gradient( #FF79DA, #9356DC);
+                    background: $gardient-explore;
+                    box-shadow : 5px 5px 3px lightgray;
                     margin: 15px;
+                    
+                    &:hover{
+                        transform: scale(1.02);
+                        opacity: 0.9;
+                    }  
                  }
         }
     }
@@ -225,8 +232,111 @@
 }
 
 // RESPONSIVE //
+@media screen and (min-width:993px) and (max-width: 1430px) {
+    .container-grid{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        width: 100%;
 
-@media  screen and (min-width: 769px)  and (max-width: 1470px){
+        main{
+            width: 100%;
+            padding: 0;
+            margin: 0;
+
+            .resto{
+                width: 100%;
+                display : flex;
+                flex-direction: column;
+
+                .menus{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-evenly;
+                    width: 100%;
+                    margin-left: 0 ;
+                    padding-top: 80px;
+
+                    .menu-standard {
+                        align-items: center;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        
+    
+                        h2{
+                        text-align: left;
+                        }
+    
+                        .list-menus{
+                            align-items: center;
+                            justify-content: space-evenly;
+                            gap: 30px;
+                            margin: 0;
+                                
+                            .entrance{
+                                width: 100%;
+                                height: 140px;
+                                font-size: medium;
+                                white-space: nowrap;
+                                overflow: hidden;         
+                                                                                
+                            
+                                .text-restaurant{
+                                    white-space: nowrap;
+                                    overflow: hidden;  
+                                    text-overflow: ellipsis;
+                                    padding: 50px 50px 50px 0;
+
+                                    h3{
+                                        text-overflow: ellipsis;
+                                        white-space: nowrap;
+                                        overflow: hidden;
+                                        margin-left: 10px;
+                                        
+                                    }
+                                    p{
+                                        text-overflow: ellipsis;
+                                        white-space: nowrap;
+                                        overflow: hidden;
+                                        margin-left: 10px;
+                                    }
+                            
+                                }
+                                .price{
+                                    margin-left: auto;
+                                    padding: 15px 0 45px 15px;
+                                    font-weight: 900;
+                                    display: flex;
+                                    align-items: flex-end;
+                                }
+                                .check{
+                                    $check-width: 65px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    background-color: $color-tertiary;
+                                    margin-right: -1 * $check-width;
+                                    width: $check-width;
+                                    height: 140px;
+                                    border-radius: 0 20px 20px 0  ;
+                                    transition: all 0.5s;
+                                    flex-shrink: 0;
+                                    
+                                }
+                            }
+                                
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+     
+}
+
+@media  screen and (min-width: 769px)  and (max-width: 992px){
     
     .container-grid{
         display: flex;
