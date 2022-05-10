@@ -102,6 +102,18 @@
 
                         h2{
                             margin-left: 10px;
+                            text-transform: uppercase;
+                            font-weight: 400;
+                            position: relative;
+                            &::after{
+                                content: "";
+                                position: absolute;
+                                top: 35px;
+                                left: 0px;
+                                height: 5px;
+                                width: 55px;
+                                background-color: $color-tertiary;
+                            }
                                                 
                         }
                                             
@@ -111,6 +123,8 @@
                             justify-content: space-evenly;
                             gap: 30px;
                             margin: 10px;
+
+                          v 
 
                             .entrance{
                                 display: flex;
@@ -123,7 +137,9 @@
                                 background-color: white;
                                 box-shadow : 5px 5px 5px lightgrey;
                                 white-space: nowrap;
-                                overflow: hidden;         
+                                overflow: hidden;  
+                                animation: progress 3s;
+
                                                                                     
                             
                                 .text-restaurant{
