@@ -30,18 +30,35 @@ footer {
 footer h4 {
   width: 100px;
   height: 17px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   color: white;
   font-weight: bold;
   font-family: shrikhand, cursive;
   font-size: larger;
   margin-top: 0px;
-  text-decoration: none;
+  list-style-type: none;
 }
 footer span {
   margin-left: 10px;
 }
 
+@-webkit-keyframes progress {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes progress {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 *, ::before, ::after {
   box-sizing: border-box;
   margin: 0;
@@ -131,6 +148,18 @@ footer span {
 }
 .container-grid main .resto .menus .menu-standard h2 {
   margin-left: 10px;
+  text-transform: uppercase;
+  font-weight: 400;
+  position: relative;
+}
+.container-grid main .resto .menus .menu-standard h2::after {
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: 0px;
+  height: 5px;
+  width: 55px;
+  background-color: #99E2D0;
 }
 .container-grid main .resto .menus .menu-standard .list-menus {
   align-items: center;
@@ -138,7 +167,7 @@ footer span {
   gap: 30px;
   margin: 10px;
 }
-.container-grid main .resto .menus .menu-standard .list-menus .entrance {
+.container-grid main .resto .menus .menu-standard .list-menus v .entrance {
   display: flex;
   width: 100%;
   height: 70px;
@@ -150,33 +179,35 @@ footer span {
   box-shadow: 5px 5px 5px lightgrey;
   white-space: nowrap;
   overflow: hidden;
+  -webkit-animation: progress 3s;
+          animation: progress 3s;
 }
-.container-grid main .resto .menus .menu-standard .list-menus .entrance .text-restaurant {
+.container-grid main .resto .menus .menu-standard .list-menus v .entrance .text-restaurant {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   padding: 10px;
 }
-.container-grid main .resto .menus .menu-standard .list-menus .entrance .text-restaurant h3 {
+.container-grid main .resto .menus .menu-standard .list-menus v .entrance .text-restaurant h3 {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   margin-left: 10px;
 }
-.container-grid main .resto .menus .menu-standard .list-menus .entrance .text-restaurant p {
+.container-grid main .resto .menus .menu-standard .list-menus v .entrance .text-restaurant p {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   margin-left: 10px;
 }
-.container-grid main .resto .menus .menu-standard .list-menus .entrance .price {
+.container-grid main .resto .menus .menu-standard .list-menus v .entrance .price {
   margin-left: auto;
   padding: 15px 0 20px 15px;
   font-weight: 900;
   display: flex;
   align-items: flex-end;
 }
-.container-grid main .resto .menus .menu-standard .list-menus .entrance .check {
+.container-grid main .resto .menus .menu-standard .list-menus v .entrance .check {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -188,7 +219,7 @@ footer span {
   transition: all 0.5s;
   flex-grow: 0;
 }
-.container-grid main .resto .menus .menu-standard .list-menus .entrance .check i {
+.container-grid main .resto .menus .menu-standard .list-menus v .entrance .check i {
   display: grid;
   place-items: center;
   background: white;
@@ -198,10 +229,10 @@ footer span {
   color: #99E2D0;
   font-weight: 900;
 }
-.container-grid main .resto .menus .menu-standard .list-menus .entrance:hover .check {
+.container-grid main .resto .menus .menu-standard .list-menus v .entrance:hover .check {
   margin-right: 0;
 }
-.container-grid main .resto .menus .menu-standard .list-menus .entrance:hover .check i {
+.container-grid main .resto .menus .menu-standard .list-menus v .entrance:hover .check i {
   -webkit-animation: quarter-check 0.5s ease-in-out;
           animation: quarter-check 0.5s ease-in-out;
 }
@@ -603,6 +634,12 @@ footer span {
   height: 100%;
   padding-bottom: 50px;
 }
+.container-grid main .description .presentation h1 {
+  padding: 10px;
+}
+.container-grid main .description .presentation p {
+  padding: 10px;
+}
 .container-grid main .description .presentation button {
   border: none;
   line-height: 2.5;
@@ -625,67 +662,55 @@ footer span {
 .container-grid main .working {
   padding: 40px;
   width: 100%;
+  counter-reset: choice;
 }
 .container-grid main .working h1 {
   margin-bottom: 15px;
   margin: 0;
 }
-.container-grid main .working .working-choice {
+.container-grid main .working ol {
+  padding: 20px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  font-size: 22px;
-  color: #000;
-  width: 100%;
-  height: auto;
   gap: 30px;
 }
-.container-grid main .working .working-choice:hover .button-choice {
-  background-color: linear-gradient(#FF79DA, #9356DC);
+.container-grid main .working ol li {
+  position: relative;
+  list-style-type: none;
+  background-color: #f6f6f6;
+  padding: 20px 30px;
+  border-radius: 20px;
+  border: 1px solidd red;
+  flex-grow: 1;
+  box-shadow: 2px 1px 8px -3px #000000;
+  font-size: 20px;
+  font-weight: bold;
 }
-.container-grid main .working .working-choice .button-choice {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  height: 100px;
-  gap: 50px;
-  margin-top: 50px;
-  margin-bottom: 30px;
-  border-radius: 30px;
-  background-color: #F2F2F2;
-  box-shadow: 5px 5px 5px lightgrey;
+.container-grid main .working ol li::before {
+  content: counter(choice);
+  counter-increment: choice;
+  color: white;
+  background-color: #9356DC;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 15px;
+  left: -15px;
 }
-.container-grid main .working .working-choice .button-choice:hover {
+.container-grid main .working ol li:hover {
   transform: scale(1.02);
-  opacity: 0.9;
 }
-.container-grid main .working .working-choice .button-choice:hover .fa-solid {
+.container-grid main .working ol li i.fa-solid {
+  margin-right: 20px;
+  color: lightgrey;
+  font-size: 25px;
+}
+.container-grid main .working ol li:hover .fa-solid {
   opacity: 1;
   transform: scale(1.2);
   color: #FF79DA;
-}
-.container-grid main .working .working-choice .button-choice h3 {
-  font-size: medium;
-  text-align: right;
-  margin-left: -20px;
-}
-.container-grid main .working .working-choice .button-choice .number {
-  margin: -20px;
-  border-radius: 20px;
-  width: 42px;
-  height: 42px;
-  background-color: #9356DC;
-  color: #fff;
-}
-.container-grid main .working .working-choice .button-choice .center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.container-grid main .working .working-choice .button-choice .fa-solid {
-  margin-left: 25px;
 }
 .container-grid main .restaurants {
   padding: 40px;
@@ -701,30 +726,28 @@ footer span {
 }
 .container-grid main .restaurants .list-restaurants .card-restaurant {
   background-color: white;
+  position: relative;
   border-radius: 15px;
   flex-grow: 1;
   width: 47%;
 }
 .container-grid main .restaurants .list-restaurants .card-restaurant .btn-new {
-  background-color: #99E2D0;
-  color: #1b6150;
+  position: absolute;
+  right: 15px;
+  top: 20px;
+  background-color: #99e2d0;
+  color: #377c6b;
   padding: 10px;
-  width: 80px;
-  border-radius: 5px;
-  float: right;
-  position: relative;
-  margin-top: -250px;
-  right: 20px;
+  font-weight: bold;
 }
 .container-grid main .restaurants .list-restaurants .card-restaurant img {
-  border-radius: 15px 15px 0 0;
-  min-height: 150px;
-  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
-  margin-top: 0;
+  width: 100%;
+  height: 200px;
+  margin-top: 0%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 .container-grid main .restaurants .list-restaurants .card-restaurant .name-restaurant .text-restaurant {
   float: left;
@@ -752,7 +775,7 @@ footer span {
   transform: scale(1.2);
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (min-width: 1138px) {
   .container-grid {
     width: 100%;
     min-height: 100vh;
@@ -767,40 +790,59 @@ footer span {
     justify-content: center;
     margin: 0 auto;
   }
-  .container-grid main .working-choice {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    font-size: 22px;
-    color: #000;
-    height: auto;
-    gap: 40px;
-  }
-  .container-grid main .working-choice .button-choice {
-    display: flex;
-    align-items: center;
-    text-align: center;
+  .container-grid main .working {
+    padding: 40px;
     width: 100%;
-    height: 100px;
-    gap: 40px;
-    margin-top: 50px;
-    margin-bottom: 30px;
-    border-radius: 30px;
-    background-color: #F2F2F2;
-    gap: 40px;
+    counter-reset: choice;
   }
-  .container-grid main .working-choice .button-choice .number {
+  .container-grid main .working h1 {
+    margin-bottom: 15px;
+    margin: 0;
+  }
+  .container-grid main .working ol {
+    padding: 20px;
+    display: flex;
+    width: 100%;
+    gap: 30px;
+  }
+  .container-grid main .working ol li {
+    position: relative;
+    list-style-type: none;
+    background-color: #f6f6f6;
+    padding: 20px 30px;
     border-radius: 20px;
-    width: 42px;
-    height: 42px;
-    background-color: #9356DC;
-    color: #fff;
+    border: 1px solidd red;
+    flex-grow: 1;
+    box-shadow: 2px 1px 8px -3px #000000;
+    font-size: 20px;
+    font-weight: bold;
   }
-  .container-grid main .working-choice .button-choice .button-choice h3 {
-    margin-left: -10px;
-    font-size: small;
+  .container-grid main .working ol li::before {
+    content: counter(choice);
+    counter-increment: choice;
+    color: white;
+    background-color: #9356DC;
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 15px;
+    left: -15px;
+  }
+  .container-grid main .working ol li:hover {
+    transform: scale(1.02);
+  }
+  .container-grid main .working ol li i.fa-solid {
+    margin-right: 20px;
+    color: lightgrey;
+    font-size: 25px;
+  }
+  .container-grid main .working ol li:hover .fa-solid {
+    opacity: 1;
+    transform: scale(1.2);
+    color: #FF79DA;
   }
   .container-grid section {
     width: 100%;
@@ -809,7 +851,140 @@ footer span {
     width: 100%;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1137px) and (min-width: 703px) {
+  .container-grid {
+    width: 100%;
+    min-height: 100vh;
+  }
+  .container-grid header {
+    width: 100%;
+  }
+  .container-grid main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .container-grid main .working {
+    padding: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    counter-reset: choice;
+  }
+  .container-grid main .working h1 {
+    margin-bottom: 15px;
+    margin: 0;
+  }
+  .container-grid main .working ol {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .container-grid main .working ol li {
+    position: relative;
+    list-style-type: none;
+    background-color: #f6f6f6;
+    padding: 20px 30px;
+    border-radius: 20px;
+    flex-grow: 1;
+    box-shadow: 2px 1px 8px -3px #000000;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .container-grid main .working ol li::before {
+    content: counter(choice);
+    counter-increment: choice;
+    color: white;
+    background-color: #9356DC;
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 15px;
+    left: -15px;
+  }
+  .container-grid main .working ol li:hover {
+    transform: scale(1.02);
+  }
+  .container-grid main .working ol li i.fa-solid {
+    margin-right: 20px;
+    color: lightgrey;
+    font-size: 25px;
+  }
+  .container-grid main .working ol li:hover .fa-solid {
+    opacity: 1;
+    transform: scale(1.2);
+    color: #FF79DA;
+  }
+  .container-grid main .restaurants {
+    padding: 40px;
+    background-color: #F2F2F2;
+  }
+  .container-grid main .restaurants h1 {
+    margin-bottom: 15px;
+  }
+  .container-grid main .restaurants .list-restaurants {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+  }
+  .container-grid main .restaurants .list-restaurants .card-restaurant {
+    background-color: white;
+    position: relative;
+    border-radius: 15px;
+    flex-grow: 1;
+    width: 47%;
+  }
+  .container-grid main .restaurants .list-restaurants .card-restaurant .btn-new {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    background-color: #99e2d0;
+    color: #377c6b;
+    padding: 10px;
+    font-weight: bold;
+  }
+  .container-grid main .restaurants .list-restaurants .card-restaurant img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: 200px;
+    margin-top: 0%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  .container-grid main .restaurants .list-restaurants .card-restaurant .name-restaurant .text-restaurant {
+    float: left;
+    margin: 15px;
+  }
+  .container-grid main .restaurants .list-restaurants .card-restaurant .name-restaurant .fa-regular {
+    float: right;
+    margin: 20px;
+    font-size: 25px;
+  }
+  .container-grid main .restaurants .list-restaurants .card-restaurant .name-restaurant .fa-solid {
+    float: right;
+    margin: 25px;
+    font-size: 25px;
+    margin-right: -45px;
+    margin-top: 20px;
+    color: transparent;
+    background-image: linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    opacity: 0;
+    transition: all 200ms ease-in-out;
+  }
+  .container-grid main .restaurants .list-restaurants .card-restaurant .name-restaurant:hover .fa-solid {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+@media screen and (max-width: 702px) {
   .container-grid {
     display: flex;
     flex-direction: column;
@@ -826,47 +1001,122 @@ footer span {
     text-align: center;
   }
   .container-grid .working {
+    padding: 40px;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    counter-reset: choice;
   }
-  .container-grid .working .working-choice {
+  .container-grid .working h1 {
+    margin-bottom: 15px;
+    margin: 0;
+  }
+  .container-grid .working ol {
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    flex-wrap: wrap;
     width: 100%;
-    align-items: center;
-    font-size: 22px;
-    color: #000;
-    height: auto;
-    gap: 40px;
+    gap: 30px;
   }
-  .container-grid .working .working-choice .button-choice {
-    width: 100%;
-    height: 80px;
-    gap: 40px;
-  }
-  .container-grid .working .working-choice .button-choice .number {
-    margin: -20px;
+  .container-grid .working ol li {
+    position: relative;
+    list-style-type: none;
+    background-color: #f6f6f6;
+    padding: 20px 30px;
     border-radius: 20px;
-    width: 42px;
-    height: 42px;
+    flex-grow: 1;
+    box-shadow: 2px 1px 8px -3px #000000;
+    font-size: 20px;
+    font-weight: bold;
+    gap: 30px;
+  }
+  .container-grid .working ol li::before {
+    content: counter(choice);
+    counter-increment: choice;
+    color: white;
     background-color: #9356DC;
-    color: #fff;
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 15px;
+    left: -15px;
+  }
+  .container-grid .working ol li:hover {
+    transform: scale(1.02);
+  }
+  .container-grid .working ol li i.fa-solid {
+    margin-right: 20px;
+    color: lightgrey;
+    font-size: 25px;
+  }
+  .container-grid .working ol li:hover .fa-solid {
+    opacity: 1;
+    transform: scale(1.2);
+    color: #FF79DA;
   }
   .container-grid .restaurants {
-    width: 100%;
+    padding: 40px;
+    background-color: #F2F2F2;
   }
-  .container-grid .restaurants .nosrestaurants {
-    width: 100%;
+  .container-grid .restaurants h1 {
+    margin-bottom: 15px;
+  }
+  .container-grid .restaurants .list-restaurants {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 35px;
   }
-  .container-grid .restaurants .nosrestaurants .carte-restaurant {
-    width: 100%;
+  .container-grid .restaurants .list-restaurants .card-restaurant {
+    background-color: white;
+    position: relative;
+    border-radius: 15px;
+    flex-grow: 1;
+    width: 47%;
   }
-  .container-grid section {
-    justify-content: center;
+  .container-grid .restaurants .list-restaurants .card-restaurant .btn-new {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    background-color: #99e2d0;
+    color: #377c6b;
+    padding: 10px;
+    font-weight: bold;
+  }
+  .container-grid .restaurants .list-restaurants .card-restaurant img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: 200px;
+    margin-top: 0%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  .container-grid .restaurants .list-restaurants .card-restaurant .name-restaurant .text-restaurant {
+    float: left;
+    margin: 15px;
+  }
+  .container-grid .restaurants .list-restaurants .card-restaurant .name-restaurant .fa-regular {
+    float: right;
+    margin: 20px;
+    font-size: 25px;
+  }
+  .container-grid .restaurants .list-restaurants .card-restaurant .name-restaurant .fa-solid {
+    float: right;
+    margin: 25px;
+    font-size: 25px;
+    margin-right: -45px;
+    margin-top: 20px;
+    color: transparent;
+    background-image: linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    opacity: 0;
+    transition: all 200ms ease-in-out;
+  }
+  .container-grid .restaurants .list-restaurants .card-restaurant .name-restaurant:hover .fa-solid {
+    opacity: 1;
+    transform: scale(1.2);
   }
 }/*# sourceMappingURL=style.css.map */

@@ -48,6 +48,14 @@
                 padding-top: 50px;
                 height: 100%;
                 padding-bottom: 50px;
+
+                h1{
+                    padding: 10px;
+                }
+
+                p{
+                    padding: 10px;
+                }
                 
                 button{
                     border: none;
@@ -79,75 +87,64 @@
                 margin-bottom: 15px;
                 margin: 0;
             }
-            .working-choice{
-                display: flex;
-                flex-direction: row;
-                justify-content: space-evenly;
-                align-items: center;
-                font-size: 22px;
-                color: #000;
-                width: 100%;
-                height: auto;
-                gap: 30px;
 
-                &:hover .button-choice{
-                    background-color: $gardient-explore;
-                }
-
-                .button-choice{
+            counter-reset: choice;
+            
+                ol{
+                    padding:20px;
                     display: flex;
-                    align-items: center;
-                    text-align: center;
-                    width: 100%;
-                    height: 100px;
-                    gap: 50px;
-                    margin-top: 50px;
-                    margin-bottom: 30px;
-                    border-radius: 30px;
-                    background-color: #F2F2F2;
-                    box-shadow : 5px 5px 5px lightgrey;
-
-                    &:hover{
-                        transform: scale(1.02);
-                        opacity: 0.9;
-                    }  
-                    
-                                
-
-                    &:hover .fa-solid{
-                        opacity: 1;
-                        transform:scale(1.2) ;
-                        color: #FF79DA;
-                        
-                    }
-                    
+                    gap: 30px;
                              
-                    h3{
-                        font-size: medium;
-                        text-align: right;
-                        margin-left: -20px;
-                    }
-
-                    .number{
-                        margin: -20px;
-                        border-radius: 20px;
-                        width: 42px;
-                        height: 42px;
-                        background-color:$color-primary;
-                        color :#fff;
-                    }
-                    .center {
-                        @include flexMid;
-                    }   
-                    .fa-solid{
-                            margin-left: 25px;                 
-                    } 
-
-                }
-
                 
+
+                    & li{
+
+                        &::before{
+                            content: counter(choice);
+                            counter-increment: choice;
+                            color: white;
+                            background-color: $color-primary;
+                            width: 30px;
+                            height: 30px;
+                            display: grid;
+                            place-items:center ;
+                            border-radius: 50%;
+                            position: absolute;
+                            bottom: 15px;
+                            left: -15px;
+                        }
+                        position: relative;
+                        list-style-type: none;
+                        background-color:#f6f6f6;
+                        padding:20px 30px;
+                        border-radius:20px;
+                        border : 1px solidd red;
+                        flex-grow:1;
+                        box-shadow: 2px 1px 8px -3px #000000;
+                        font-size: 20px;
+                        font-weight: bold;
+    
+                        &:hover{
+                            transform: scale(1.02);
+                        }
+
+                        & i.fa-solid{
+                            margin-right: 20px;
+                            color: lightgrey;
+                            font-size: 25px;
+
+                        }
+
+                        &:hover .fa-solid{
+                            opacity: 1;
+                            transform:scale(1.2) ;
+                            color: #FF79DA;
+                            
+                        }
+                    }
+        
+                }
             }
-        }
 
         .restaurants{
             padding: 40px;
@@ -162,35 +159,32 @@
                 gap: 35px;
                 .card-restaurant{
                     background-color: white;
+                    position: relative;
                     border-radius: 15px;
                     flex-grow: 1;
                     width: 47%;
 
                     .btn-new {
-                        background-color: #99E2D0;
-                        color: #1b6150;
+                        position: absolute;
+                        right: 15px;
+                        top: 20px;
+                        background-color: #99e2d0;
+                        color: #377c6b;
                         padding: 10px;
-                        width: 80px;
-                        border-radius: 5px;
-                        float: right;
-                        position: relative;
-                        margin-top: -250px;
-                        right: 20px;
+                        font-weight: bold;
                     }
               
                         img{
-                            border-radius: 15px 15px 0 0;
-                            min-height: 150px;
-                            width: 100%;
                             object-fit: cover;
-                            object-position: top;
-                            margin-top: 0;
+                            width: 100%;
+                            height: 200px;
+                            margin-top: 0%;
+                            border-top-left-radius: 20px;
+                            border-top-right-radius: 20px;
                                                            
                         }
                  
-                                                         
-
-                    
+                                      
                     .name-restaurant {
                         .text-restaurant{
                             float: left;
@@ -229,7 +223,7 @@
 }
 
 // RESPONSIVE //
-@media screen and (max-width:992px){
+@media screen and (min-width:1138px){
     .container-grid{
         width: 100%;
         min-height: 100vh;
@@ -245,46 +239,75 @@
             justify-content: center;
             margin: 0 auto;
 
-            .working-choice{
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                align-items: center;
-                flex-wrap: wrap;
-                font-size: 22px;
-                color: #000;
-                height: auto;
-                gap: 40px;
 
-                .button-choice{
-                    display: flex;
-                    align-items: center;
-                    text-align: center;
-                    width: 100%;
-                    height: 100px;
-                    gap: 40px;
-                    margin-top: 50px;
-                    margin-bottom: 30px;
-                    border-radius: 30px;
-                    background-color:#F2F2F2;
-                    gap: 40px;
-
-                    
-                    .number{
-                    
-                        border-radius: 20px;
-                        width: 42px;
-                        height: 42px;
-                        background-color:#9356DC;
-                        color :#fff;
-                    }
-
-                    .button-choice h3{
-                        margin-left: -10px;
-                        font-size: small;
+            .working{
+                padding: 40px;
+                width: 100%;
+                
+    
+                h1{
+                    margin-bottom: 15px;
+                    margin: 0;
+                }
+    
+                counter-reset: choice;
+                
+                    ol{
+                        padding:20px;
+                        display: flex;
+                        width: 100%;
+                        gap: 30px;
+                                 
+                         
+                        & li{
+    
+                            &::before{
+                                content: counter(choice);
+                                counter-increment: choice;
+                                color: white;
+                                background-color: $color-primary;
+                                width: 30px;
+                                height: 30px;
+                                display: grid;
+                                place-items:center ;
+                                border-radius: 50%;
+                                position: absolute;
+                                bottom: 15px;
+                                left: -15px;
+                            }
+                            position: relative;
+                            list-style-type: none;
+                            background-color:#f6f6f6;
+                            padding:20px 30px;
+                            border-radius:20px;
+                            border : 1px solidd red;
+                            flex-grow:1;
+                            box-shadow: 2px 1px 8px -3px #000000;
+                            font-size: 20px;
+                            font-weight: bold;
+        
+                            &:hover{
+                                transform: scale(1.02);
+                            }
+    
+                            & i.fa-solid{
+                                margin-right: 20px;
+                                color: lightgrey;
+                                font-size: 25px;
+    
+                            }
+    
+                            &:hover .fa-solid{
+                                opacity: 1;
+                                transform:scale(1.2) ;
+                                color: #FF79DA;
+                                
+                            }
+                        }
+            
                     }
                 }
-            }
+          
         }
         section {
             width: 100%;
@@ -295,7 +318,171 @@
     }
 }
 
-@media  screen and (max-width: 768px) {
+
+// RESPONSIVE //
+@media screen and (max-width:1137px)and (min-width: 703px){
+    .container-grid{
+        width: 100%;
+        min-height: 100vh;
+
+        header{
+            width: 100%;
+        }
+
+        main{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 auto;
+
+
+            .working{
+                padding: 40px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                
+    
+                h1{
+                    margin-bottom: 15px;
+                    margin: 0;
+                }
+    
+                counter-reset: choice;
+                
+                    ol{
+                        padding:20px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 30px;
+                                 
+                         
+                        & li{
+    
+                            &::before{
+                                content: counter(choice);
+                                counter-increment: choice;
+                                color: white;
+                                background-color: $color-primary;
+                                width: 30px;
+                                height: 30px;
+                                display: grid;
+                                place-items:center ;
+                                border-radius: 50%;
+                                position: absolute;
+                                bottom: 15px;
+                                left: -15px;
+                            }
+                            position: relative;
+                            list-style-type: none;
+                            background-color:#f6f6f6;
+                            padding:20px 30px;
+                            border-radius:20px;
+                            flex-grow:1;
+                            box-shadow: 2px 1px 8px -3px #000000;
+                            font-size: 20px;
+                            font-weight: bold;
+                       
+        
+                            &:hover{
+                                transform: scale(1.02);
+                            }
+    
+                            & i.fa-solid{
+                                margin-right: 20px;
+                                color: lightgrey;
+                                font-size: 25px;
+    
+                            }
+    
+                            &:hover .fa-solid{
+                                opacity: 1;
+                                transform:scale(1.2) ;
+                                color: #FF79DA;
+                                
+                            }
+                        }
+            
+                    }
+                }
+                .restaurants{
+                    padding: 40px;
+                    background-color: #F2F2F2;
+                    h1{
+                        margin-bottom: 15px;
+                    }
+              
+                    .list-restaurants{
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 35px;
+                        .card-restaurant{
+                            background-color: white;
+                            position: relative;
+                            border-radius: 15px;
+                            flex-grow: 1;
+                            width: 47%;
+        
+                            .btn-new {
+                                position: absolute;
+                                right: 15px;
+                                top: 20px;
+                                background-color: #99e2d0;
+                                color: #377c6b;
+                                padding: 10px;
+                                font-weight: bold;
+                            }
+                      
+                                img{
+                                    object-fit: cover;
+                                    width: 100%;
+                                    height: 200px;
+                                    margin-top: 0%;
+                                    border-top-left-radius: 20px;
+                                    border-top-right-radius: 20px;
+                                                                   
+                                }
+                         
+                                              
+                            .name-restaurant {
+                                .text-restaurant{
+                                    float: left;
+                                    margin: 15px ;
+                                }
+                                .fa-regular{
+                                    float: right;
+                                    margin: 20px;
+                                    font-size:25px;
+                                }
+                                .fa-solid{
+                                    float: right;
+                                    margin: 25px;
+                                    font-size:25px;
+                                    margin-right: -45px; ;
+                                    margin-top: 20px;
+                                    color: transparent;
+                                    background-image: linear-gradient($color-primary, $color-secondary);
+                                    -webkit-background-clip: text;
+                                    opacity: 0;
+                                    transition: all 200ms ease-in-out;
+                                
+                                }
+                                &:hover .fa-solid{
+                                    opacity: 1;
+                                    transform:scale(1.2) ;
+                                }
+                            }
+                        }
+                    
+                    }
+                }
+          
+        }
+    }
+}
+
+@media  screen and (max-width: 702px) {
     .container-grid{
         display: flex;
         flex-direction: column;
@@ -313,63 +500,149 @@
             }
         }
 
+        
         .working{
+            padding: 40px;
+            width: 100%;
             display: flex;
             flex-direction: column;
-        
 
-            .working-choice{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                flex-wrap: wrap;
-                width: 100%;
-                align-items: center;
-                font-size: 22px;
-                color: #000;
-                height: auto;
-                gap: 40px;
+                h1{
+                    margin-bottom: 15px;
+                    margin: 0;
+                }
 
-                .button-choice{
+                counter-reset: choice;
+            
+                ol{
+                    padding:20px;
+                    display: flex;
+                    flex-direction: column;
                     width: 100%;
-                    height: 80px;
-                    gap: 40px;
+                    gap: 30px;
+                             
+                     
+                    & li{
 
-                    .number{
-                        margin: -20px;
-                        border-radius: 20px;
-                        width: 42px;
-                        height: 42px;
-                        background-color:#9356DC;
-                        color :#fff;
-                    
+                        &::before{
+                            content: counter(choice);
+                            counter-increment: choice;
+                            color: white;
+                            background-color: $color-primary;
+                            width: 30px;
+                            height: 30px;
+                            display: grid;
+                            place-items:center ;
+                            border-radius: 50%;
+                            position: absolute;
+                            bottom: 15px;
+                            left: -15px;
+                        }
+                        position: relative;
+                        list-style-type: none;
+                        background-color:#f6f6f6;
+                        padding:20px 30px;
+                        border-radius:20px;
+                        flex-grow:1;
+                        box-shadow: 2px 1px 8px -3px #000000;
+                        font-size: 20px;
+                        font-weight: bold;
+                        gap: 30px;
+    
+                        &:hover{
+                            transform: scale(1.02);
+                        }
+
+                        & i.fa-solid{
+                            margin-right: 20px;
+                            color: lightgrey;
+                            font-size: 25px;
+
+                        }
+
+                        &:hover .fa-solid{
+                            opacity: 1;
+                            transform:scale(1.2) ;
+                            color: #FF79DA;
+                            
+                        }
                     }
+        
                 }
             }
-        }
 
-         .restaurants{
-            width: 100%;
-
-            .nosrestaurants{
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                gap: 35px;
-
-                
-    .carte-restaurant{
-        width: 100%;
-     
-    }
+        .restaurants{
+            padding: 40px;
+            background-color: #F2F2F2;
+            h1{
+                margin-bottom: 15px;
             }
-           
-        }
+      
+            .list-restaurants{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 35px;
+                .card-restaurant{
+                    background-color: white;
+                    position: relative;
+                    border-radius: 15px;
+                    flex-grow: 1;
+                    width: 47%;
 
-    
-        section {
-            justify-content: center;
-           
+                    .btn-new {
+                        position: absolute;
+                        right: 15px;
+                        top: 20px;
+                        background-color: #99e2d0;
+                        color: #377c6b;
+                        padding: 10px;
+                        font-weight: bold;
+                    }
+              
+                        img{
+                            object-fit: cover;
+                            width: 100%;
+                            height: 200px;
+                            margin-top: 0%;
+                            border-top-left-radius: 20px;
+                            border-top-right-radius: 20px;
+                                                           
+                        }
+                 
+                                      
+                    .name-restaurant {
+                        .text-restaurant{
+                            float: left;
+                            margin: 15px ;
+                        }
+                        .fa-regular{
+                            float: right;
+                            margin: 20px;
+                            font-size:25px;
+                        }
+                        .fa-solid{
+                            float: right;
+                            margin: 25px;
+                            font-size:25px;
+                            margin-right: -45px; ;
+                            margin-top: 20px;
+                            color: transparent;
+                            background-image: linear-gradient($color-primary, $color-secondary);
+                            -webkit-background-clip: text;
+                            opacity: 0;
+                            transition: all 200ms ease-in-out;
+                        
+                        }
+                        &:hover .fa-solid{
+                            opacity: 1;
+                            transform:scale(1.2) ;
+                        }
+                    }
+                }
+            
+            }
         }
     }
+
+
 }
