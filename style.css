@@ -78,6 +78,7 @@ footer span {
   display: grid;
   margin: 10px auto;
   padding: 10px;
+  position: relative;
 }
 .container-grid .header-arrow {
   position: absolute;
@@ -87,7 +88,6 @@ footer span {
   font-weight: 900;
   color: #000;
   width: 30px;
-  font-family: "Shrikhand", "cursive";
 }
 .container-grid main {
   background-color: white;
@@ -635,7 +635,7 @@ footer span {
   width: 100%;
   display: grid;
   margin: 10px auto;
-  padding: 10px ;
+  padding: 10px auto;
 }
 .container-grid main {
   display: flex;
@@ -865,6 +865,7 @@ footer span {
     background-color: #f6f6f6;
     padding: 20px 30px;
     border-radius: 20px;
+    border: 1px solidd red;
     flex-grow: 1;
     box-shadow: 2px 1px 8px -3px #000000;
     font-size: 20px;

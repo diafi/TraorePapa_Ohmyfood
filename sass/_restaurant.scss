@@ -15,6 +15,7 @@
     display: grid;
     margin: 10px auto;
     padding: 10px ;
+    position: relative;
     
         .header-arrow{
             position: absolute; 
@@ -24,9 +25,7 @@
             font-weight: 900;
             color: #000;
             width: 30px;
-            font-family: "Shrikhand", "cursive";
-            
-             
+                 
         }
 
 
