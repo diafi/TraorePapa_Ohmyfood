@@ -319,7 +319,7 @@ footer span {
     justify-content: space-between;
   }
   .container-grid main .resto .menus .menu-standard h2 {
-    text-align: left;
+    margin-left: 0;
   }
   .container-grid main .resto .menus .menu-standard .list-menus {
     align-items: center;
@@ -406,7 +406,7 @@ footer span {
     margin-left: 0;
   }
   .container-grid main .resto .menus .menu-standard h2 {
-    text-align: center;
+    text-align: left;
   }
   .container-grid main .resto .menus .menu-standard .list-menus {
     align-items: center;
