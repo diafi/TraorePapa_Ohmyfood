@@ -25,7 +25,13 @@ footer {
   background-color: rgb(53, 53, 53);
   color: white;
   line-height: 30px;
+}
+footer a {
+  color: white;
   text-decoration: none;
+}
+footer a:hover {
+  color: white;
 }
 footer h4 {
   width: 100px;
@@ -36,7 +42,8 @@ footer h4 {
   font-family: shrikhand, cursive;
   font-size: larger;
   margin-top: 0px;
-  list-style-type: none;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
 }
 footer span {
   margin-left: 10px;
@@ -167,7 +174,7 @@ footer span {
   gap: 30px;
   margin: 10px;
 }
-.container-grid main .resto .menus .menu-standard .list-menus v .entrance {
+.container-grid main .resto .menus .menu-standard .list-menus .entrance {
   display: flex;
   width: 100%;
   height: 70px;
@@ -182,32 +189,32 @@ footer span {
   -webkit-animation: progress 3s;
           animation: progress 3s;
 }
-.container-grid main .resto .menus .menu-standard .list-menus v .entrance .text-restaurant {
+.container-grid main .resto .menus .menu-standard .list-menus .entrance .text-restaurant {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   padding: 10px;
 }
-.container-grid main .resto .menus .menu-standard .list-menus v .entrance .text-restaurant h3 {
+.container-grid main .resto .menus .menu-standard .list-menus .entrance .text-restaurant h3 {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   margin-left: 10px;
 }
-.container-grid main .resto .menus .menu-standard .list-menus v .entrance .text-restaurant p {
+.container-grid main .resto .menus .menu-standard .list-menus .entrance .text-restaurant p {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   margin-left: 10px;
 }
-.container-grid main .resto .menus .menu-standard .list-menus v .entrance .price {
+.container-grid main .resto .menus .menu-standard .list-menus .entrance .price {
   margin-left: auto;
   padding: 15px 0 20px 15px;
   font-weight: 900;
   display: flex;
   align-items: flex-end;
 }
-.container-grid main .resto .menus .menu-standard .list-menus v .entrance .check {
+.container-grid main .resto .menus .menu-standard .list-menus .entrance .check {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -219,7 +226,7 @@ footer span {
   transition: all 0.5s;
   flex-grow: 0;
 }
-.container-grid main .resto .menus .menu-standard .list-menus v .entrance .check i {
+.container-grid main .resto .menus .menu-standard .list-menus .entrance .check i {
   display: grid;
   place-items: center;
   background: white;
@@ -229,10 +236,10 @@ footer span {
   color: #99E2D0;
   font-weight: 900;
 }
-.container-grid main .resto .menus .menu-standard .list-menus v .entrance:hover .check {
+.container-grid main .resto .menus .menu-standard .list-menus .entrance:hover .check {
   margin-right: 0;
 }
-.container-grid main .resto .menus .menu-standard .list-menus v .entrance:hover .check i {
+.container-grid main .resto .menus .menu-standard .list-menus .entrance:hover .check i {
   -webkit-animation: quarter-check 0.5s ease-in-out;
           animation: quarter-check 0.5s ease-in-out;
 }
@@ -275,6 +282,7 @@ footer span {
 .container-grid main .resto .command button:hover {
   transform: scale(1.02);
   opacity: 0.9;
+  filter: brightness(1.25);
 }
 .container-grid footer {
   width: 100%;
@@ -306,7 +314,7 @@ footer span {
     padding-top: 80px;
   }
   .container-grid main .resto .menus .menu-standard {
-    align-items: center;
+    align-items: left;
     flex-direction: column;
     justify-content: space-between;
   }
@@ -589,6 +597,37 @@ footer span {
   padding: 0;
 }
 
+.loader {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  background-color: #ffffff;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.9;
+  -webkit-animation: loader 200ms 3s forwards;
+          animation: loader 200ms 3s forwards;
+  transform-origin: top;
+}
+
+@-webkit-keyframes loader {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+
+@keyframes loader {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
 .container-grid {
   height: 100vh;
   width: 100%;
@@ -658,6 +697,7 @@ footer span {
 .container-grid main .description .presentation button:hover {
   transform: scale(1.02);
   opacity: 0.9;
+  filter: brightness(1.25);
 }
 .container-grid main .working {
   padding: 40px;
@@ -679,7 +719,6 @@ footer span {
   background-color: #f6f6f6;
   padding: 20px 30px;
   border-radius: 20px;
-  border: 1px solidd red;
   flex-grow: 1;
   box-shadow: 2px 1px 8px -3px #000000;
   font-size: 20px;
@@ -701,6 +740,8 @@ footer span {
 }
 .container-grid main .working ol li:hover {
   transform: scale(1.02);
+  opacity: 0.9;
+  filter: brightness(1.1);
 }
 .container-grid main .working ol li i.fa-solid {
   margin-right: 20px;
@@ -749,9 +790,20 @@ footer span {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
+.container-grid main .restaurants .list-restaurants .card-restaurant img:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+  filter: brightness(1.25);
+}
 .container-grid main .restaurants .list-restaurants .card-restaurant .name-restaurant .text-restaurant {
   float: left;
   margin: 15px;
+  color: #000;
+  text-decoration: none;
+}
+.container-grid main .restaurants .list-restaurants .card-restaurant .name-restaurant .text-restaurant h4 {
+  font-size: 20px;
+  font-weight: 900;
 }
 .container-grid main .restaurants .list-restaurants .card-restaurant .name-restaurant .fa-regular {
   float: right;

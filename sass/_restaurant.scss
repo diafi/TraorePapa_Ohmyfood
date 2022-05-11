@@ -236,6 +236,7 @@
                     &:hover{
                         transform: scale(1.02);
                         opacity: 0.9;
+                        filter: brightness(1.25);
                     }  
                  }
         }
@@ -274,13 +275,14 @@
                     padding-top: 80px;
 
                     .menu-standard {
-                        align-items: center;
+                        align-items: left;
                         flex-direction: column;
                         justify-content: space-between;
                         
     
                         h2{
                         text-align: left;
+                           
                         }
     
                         .list-menus{

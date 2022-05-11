@@ -6,7 +6,18 @@ footer{
     background-color:rgb(53, 53, 53);
     color: white;
     line-height: 30px;
-    text-decoration: none;
+    
+
+    a{
+        color: white;  
+        text-decoration: none;
+    }
+    a:hover 
+    {
+       color: white;
+    }
+   
+
 
     h4{
         width: 100px;
@@ -17,7 +28,7 @@ footer{
         font-family: shrikhand, cursive;
         font-size: larger;
         margin-top: 0px;
-        list-style-type: none;
+        text-decoration-line: none;
         
         
         

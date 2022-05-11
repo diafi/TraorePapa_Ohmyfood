@@ -10,12 +10,36 @@
 }
 
 
+.loader{
+    position: fixed;
+    display: grid;
+    place-items: center;
+    background-color: #ffffff;
+    height: 100vh;
+    inset: 0;
+    z-index: 1;
+    opacity: 0.9;
+    animation: loader 200ms 3s forwards;
+    transform-origin: top;
+   
+}
+@keyframes loader{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(0);
+        
+    }
+}
+
 .container-grid{
     height: 100vh;
     width: 100%;
     display: grid;
     margin: 10px auto;
     padding: 10px auto;
+
 
     main{
         display:flex;
@@ -75,6 +99,7 @@
                     &:hover{
                         transform: scale(1.02);
                         opacity: 0.9;
+                        filter: brightness(1.25);
                     }  
                 }         
             }
@@ -118,7 +143,6 @@
                         background-color:#f6f6f6;
                         padding:20px 30px;
                         border-radius:20px;
-                        border : 1px solidd red;
                         flex-grow:1;
                         box-shadow: 2px 1px 8px -3px #000000;
                         font-size: 20px;
@@ -126,7 +150,9 @@
     
                         &:hover{
                             transform: scale(1.02);
-                        }
+                            opacity: 0.9;
+                            filter: brightness(1.10);
+                        } 
 
                         & i.fa-solid{
                             margin-right: 20px;
@@ -181,14 +207,29 @@
                             margin-top: 0%;
                             border-top-left-radius: 20px;
                             border-top-right-radius: 20px;
+
+                            &:hover{
+                                transform: scale(1.02);
+                                opacity: 0.9;
+                                filter: brightness(1.25);
+                            } 
                                                            
                         }
                  
                                       
                     .name-restaurant {
+                        
                         .text-restaurant{
                             float: left;
                             margin: 15px ;
+                            color:#000;  
+                            text-decoration: none;
+                            h4{
+                                font-size: 20px;
+                                font-weight: 900;
+                            }
+
+                    
                         }
                         .fa-regular{
                             float: right;
