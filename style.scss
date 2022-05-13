@@ -265,7 +265,7 @@
 }
 
 // RESPONSIVE //
-@media screen and (min-width:1138px){
+@media screen and (min-width:1150px){
     .container-grid{
         width: 100%;
         min-height: 100vh;
@@ -363,7 +363,7 @@
 
 
 // RESPONSIVE //
-@media screen and (max-width:1137px) and (min-width: 703px){
+@media screen and (max-width:1149px) and (min-width: 738px){
     .container-grid{
         width: 100%;
         min-height: 100vh;
@@ -382,7 +382,7 @@
 
             .working{
                 padding: 40px;
-                width: 100%;
+                width: 75%;
                 display: flex;
                 flex-direction: column;
                 
@@ -426,7 +426,8 @@
                             box-shadow: 2px 1px 8px -3px #000000;
                             font-size: 20px;
                             font-weight: bold;
-                       
+                            
+                         
         
                             &:hover{
                                 transform: scale(1.02);
@@ -436,7 +437,11 @@
                                 margin-right: 20px;
                                 color: lightgrey;
                                 font-size: 25px;
-    
+                                margin-left: 50px;
+                            }
+
+                            & span {
+                                margin-left: 30px;
                             }
     
                             &:hover .fa-solid{
@@ -525,7 +530,7 @@
     }
 }
 
-@media  screen and (min-width: 490px) and (max-width: 702px) {
+@media  screen and (min-width: 490px) and (max-width: 737px) {
     .container-grid{
         display: flex;
         flex-direction: column;
@@ -691,7 +696,7 @@
 
 
 
-@media  screen  and (max-width: 489px) {
+@media  screen  and (max-width: 490px) {
     .container-grid{
         display: flex;
         flex-direction: column;
@@ -709,24 +714,32 @@
             }
         }
 
-        
         .working{
             display: flex;
             justify-content: center;
             flex-direction: column;
             width: 100% ;
-            margin-left: -45px;
-            margin-right: 65px;
+            
            
             ol{
                 display: flex;
                 flex-direction: column;
                 justify-content:center;
-                min-width:350px ;
+                max-width:300px ;
                 margin: 0 auto;
 
                 li{
-                    min-width: 300px;
+                    min-width: 250px;
+                    margin-left: -50px;
+
+                    i{
+                        font-size: medium;
+                    }
+
+                    span{
+                        font-size: small;
+
+                    }
                     
                  
                 }
@@ -809,37 +822,4 @@
     }
 
 
-}
-
-@media screen and (min-width :384px) and (max-width : 489px){
-    .working{
-      
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 100%;
-
-            h1{
-                margin-bottom: 15px;
-                margin: 0;
-            }
-
-            counter-reset: choice;
-        
-            ol{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                width: 100%;
-                                       
-                 
-                & li{
-
-                    min-width: 300px;
-                       
-                   
-                }
-    
-            }
-        }
 }

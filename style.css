@@ -829,7 +829,7 @@ footer span {
   transform: scale(1.2);
 }
 
-@media screen and (min-width: 1138px) {
+@media screen and (min-width: 1150px) {
   .container-grid {
     width: 100%;
     min-height: 100vh;
@@ -905,7 +905,7 @@ footer span {
     width: 100%;
   }
 }
-@media screen and (max-width: 1137px) and (min-width: 703px) {
+@media screen and (max-width: 1149px) and (min-width: 738px) {
   .container-grid {
     width: 100%;
     min-height: 100vh;
@@ -922,7 +922,7 @@ footer span {
   }
   .container-grid main .working {
     padding: 40px;
-    width: 100%;
+    width: 75%;
     display: flex;
     flex-direction: column;
     counter-reset: choice;
@@ -969,6 +969,10 @@ footer span {
     margin-right: 20px;
     color: lightgrey;
     font-size: 25px;
+    margin-left: 50px;
+  }
+  .container-grid main .working ol li span {
+    margin-left: 30px;
   }
   .container-grid main .working ol li:hover .fa-solid {
     opacity: 1;
@@ -1038,7 +1042,7 @@ footer span {
     transform: scale(1.2);
   }
 }
-@media screen and (min-width: 490px) and (max-width: 702px) {
+@media screen and (min-width: 490px) and (max-width: 737px) {
   .container-grid {
     display: flex;
     flex-direction: column;
@@ -1174,7 +1178,7 @@ footer span {
     transform: scale(1.2);
   }
 }
-@media screen and (max-width: 489px) {
+@media screen and (max-width: 490px) {
   .container-grid {
     display: flex;
     flex-direction: column;
@@ -1195,18 +1199,23 @@ footer span {
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    margin-left: -45px;
-    margin-right: 65px;
   }
   .container-grid .working ol {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-width: 350px;
+    max-width: 300px;
     margin: 0 auto;
   }
   .container-grid .working ol li {
-    min-width: 300px;
+    min-width: 250px;
+    margin-left: -50px;
+  }
+  .container-grid .working ol li i {
+    font-size: medium;
+  }
+  .container-grid .working ol li span {
+    font-size: small;
   }
   .container-grid .restaurants {
     padding: 10px;
@@ -1268,27 +1277,5 @@ footer span {
   .container-grid .restaurants .list-restaurants .card-restaurant .name-restaurant:hover .fa-solid {
     opacity: 1;
     transform: scale(1.2);
-  }
-}
-@media screen and (min-width: 384px) and (max-width: 489px) {
-  .working {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    counter-reset: choice;
-  }
-  .working h1 {
-    margin-bottom: 15px;
-    margin: 0;
-  }
-  .working ol {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-  }
-  .working ol li {
-    min-width: 300px;
   }
 }/*# sourceMappingURL=style.css.map */
