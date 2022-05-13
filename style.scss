@@ -530,7 +530,7 @@
     }
 }
 
-@media  screen and (min-width: 351px) and (max-width: 737px) {
+@media  screen and (min-width: 455px) and (max-width: 737px) {
     .container-grid{
         display: flex;
         flex-direction: column;
@@ -703,7 +703,7 @@
 
 
 
-@media  screen  and (max-width: 350px) {
+@media  screen  and (max-width: 454px) {
     .container-grid{
         display: flex;
         flex-direction: column;
@@ -737,10 +737,10 @@
 
                 li{
                     min-width: 250px;
-                    margin-left: -50px;
+                    margin-left: -15px;
 
                     i{
-                        font-size: medium;
+                        font-size: small;
                     }
 
                     span{

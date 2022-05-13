@@ -1042,7 +1042,7 @@ footer span {
     transform: scale(1.2);
   }
 }
-@media screen and (min-width: 351px) and (max-width: 737px) {
+@media screen and (min-width: 455px) and (max-width: 737px) {
   .container-grid {
     display: flex;
     flex-direction: column;
@@ -1184,7 +1184,7 @@ footer span {
     transform: scale(1.2);
   }
 }
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 454px) {
   .container-grid {
     display: flex;
     flex-direction: column;
@@ -1215,10 +1215,10 @@ footer span {
   }
   .container-grid .working ol li {
     min-width: 250px;
-    margin-left: -50px;
+    margin-left: -15px;
   }
   .container-grid .working ol li i {
-    font-size: medium;
+    font-size: small;
   }
   .container-grid .working ol li span {
     font-size: small;
