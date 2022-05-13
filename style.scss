@@ -530,7 +530,7 @@
     }
 }
 
-@media  screen and (min-width: 490px) and (max-width: 737px) {
+@media  screen and (min-width: 351px) and (max-width: 737px) {
     .container-grid{
         display: flex;
         flex-direction: column;
@@ -597,6 +597,8 @@
                         font-size: 20px;
                         font-weight: bold;
                         gap: 30px;
+                        min-width: 300px;
+                        margin-left: -15px;
     
                         &:hover{
                             transform: scale(1.02);
@@ -605,8 +607,13 @@
                         & i.fa-solid{
                             margin-right: 20px;
                             color: lightgrey;
-                            font-size: 25px;
+                            font-size: medium;
+                            margin-left: 10px;
 
+                        }
+
+                        & span{
+                            font-size: medium;
                         }
 
                         &:hover .fa-solid{
@@ -696,7 +703,7 @@
 
 
 
-@media  screen  and (max-width: 490px) {
+@media  screen  and (max-width: 350px) {
     .container-grid{
         display: flex;
         flex-direction: column;

@@ -1042,7 +1042,7 @@ footer span {
     transform: scale(1.2);
   }
 }
-@media screen and (min-width: 490px) and (max-width: 737px) {
+@media screen and (min-width: 351px) and (max-width: 737px) {
   .container-grid {
     display: flex;
     flex-direction: column;
@@ -1086,6 +1086,8 @@ footer span {
     font-size: 20px;
     font-weight: bold;
     gap: 30px;
+    min-width: 300px;
+    margin-left: -15px;
   }
   .container-grid .working ol li::before {
     content: counter(choice);
@@ -1107,7 +1109,11 @@ footer span {
   .container-grid .working ol li i.fa-solid {
     margin-right: 20px;
     color: lightgrey;
-    font-size: 25px;
+    font-size: medium;
+    margin-left: 10px;
+  }
+  .container-grid .working ol li span {
+    font-size: medium;
   }
   .container-grid .working ol li:hover .fa-solid {
     opacity: 1;
@@ -1178,7 +1184,7 @@ footer span {
     transform: scale(1.2);
   }
 }
-@media screen and (max-width: 490px) {
+@media screen and (max-width: 350px) {
   .container-grid {
     display: flex;
     flex-direction: column;
