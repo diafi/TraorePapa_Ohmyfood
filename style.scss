@@ -9,6 +9,19 @@
     padding: 0;
 }
 
+h1{
+    font-family: 'Shrikhand', sans-serif;
+    font-size: 25px;
+}
+
+h2{
+    font-size: 20px;
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
 
 .loader{
     position: fixed;
@@ -22,11 +35,10 @@
     animation: loader 200ms 3s forwards;
     transform-origin: top;
 
-     
-}
-
-.loader i{
-    color: #FF79DA;
+    & i{
+        background:$gradient-explore;
+        color: $color-tertiary;
+    }
 }
 @keyframes loader{
     from{
@@ -67,6 +79,10 @@
                 padding: 20px;
                 gap: 20px;
                 min-width: 100%;
+                text-align: center;
+                padding: 15px 0 15px 0;
+                font-weight: 700;
+                box-shadow: inset 0px 2px 5px 0px #c4c3c0;
             }
             .presentation{
                 display: flex;
@@ -89,17 +105,17 @@
                 button{
                     border: none;
                     line-height: 2.5;
-                    padding: 0 20px;
-                    font-size: 25px;
+                    padding: 0 10px;
+                    font-size: 20px;
                     text-align: center;
                     color: #fff;
                     text-shadow: 1px 1px 1px #000;
                     border-radius: 50px;
                     align-self: center;
                     margin: 15px;
-                    background: $gardient-explore;
+                    background: $gradient-explore;
                     box-shadow : 5px 5px 10px -3px lightgray;
-                    width: 400px;
+                    width: auto;
 
                     &:hover{
                         transform: scale(1.02);
@@ -110,7 +126,7 @@
             }
         }
         .working{
-            padding: 40px;
+            padding: 20px;
             width: 100%;
 
             h1{
@@ -146,13 +162,14 @@
                         }
                         position: relative;
                         list-style-type: none;
+                        margin-top: 20px;
                         background-color:#f6f6f6;
-                        padding:20px 30px;
                         border-radius:20px;
                         flex-grow:1;
                         box-shadow: 2px 1px 8px -3px #000000;
                         font-size: 20px;
-                        font-weight: bold;
+                        
+                        
     
                         &:hover{
                             transform: scale(1.02);
@@ -160,11 +177,16 @@
                             filter: brightness(1.10);
                         } 
 
-                        & i.fa-solid{
+                        & .fa-solid{
                             margin-right: 20px;
                             color: lightgrey;
-                            font-size: 25px;
+                            font-size: xx-small;
 
+                        }
+
+                        & span{
+                            font-size: medium;
+                            font-weight: 100;
                         }
 
                         &:hover .fa-solid{
@@ -200,7 +222,7 @@
                         position: absolute;
                         right: 15px;
                         top: 20px;
-                        background-color: #99e2d0;
+                        background-color: $color-tertiary;
                         color: #377c6b;
                         padding: 10px;
                         font-weight: bold;
@@ -327,7 +349,6 @@
                             background-color:#f6f6f6;
                             padding:20px 30px;
                             border-radius:20px;
-                            border : 1px solidd red;
                             flex-grow:1;
                             box-shadow: 2px 1px 8px -3px #000000;
                             font-size: 20px;
@@ -473,6 +494,7 @@
                         .card-restaurant{
                             background-color: white;
                             position: relative;
+                        
                             border-radius: 15px;
                             flex-grow: 1;
                             width: 47%;
@@ -655,7 +677,7 @@
                         position: absolute;
                         right: 15px;
                         top: 20px;
-                        background-color: #99e2d0;
+                        background-color: $color-tertiary;
                         color: #377c6b;
                         padding: 10px;
                         font-weight: bold;
@@ -737,19 +759,22 @@
                 display: flex;
                 flex-direction: column;
                 justify-content:center;
-                max-width:300px ;
+                max-width:350px ;
                 margin: 0 auto;
 
                 li{
                     min-width: 250px;
-                    margin-left: -15px;
+                    margin-left: -25px;
+                    padding: 15px;
 
                     i{
                         font-size: small;
+                        margin-left: 15px;
                     }
 
                     span{
                         font-size: small;
+                        margin-left: -10px;
 
                     }
                     
@@ -782,7 +807,7 @@
                         position: absolute;
                         right: 15px;
                         top: 20px;
-                        background-color: #99e2d0;
+                        background-color: $color-tertiary;
                         color: #377c6b;
                         padding: 10px;
                         font-weight: bold;
@@ -865,22 +890,22 @@
                 display: flex;
                 flex-direction: column;
                 justify-content:center;
-                
+                max-width: 300;
                 margin: 0 auto;
 
                 li{
                     display: flex;
-                    min-width: 150px;                    
+                    min-width: 200px;                    
                     margin-left: -25px;
 
 
                     i{
-                        font-size: small;
-                        margin-left: -10px;
+                        font-size: xx-small;
+                        margin-left: 10px;
                     }
 
                     span{
-                        font-size: small;
+                        font-size: xx-small;
 
                     }
                     
