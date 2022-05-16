@@ -21,7 +21,12 @@
     opacity: 0.9;
     animation: loader 200ms 3s forwards;
     transform-origin: top;
-   
+
+     
+}
+
+.loader i{
+    color: #FF79DA;
 }
 @keyframes loader{
     from{
