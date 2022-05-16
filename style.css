@@ -185,13 +185,13 @@ h2 {
 .container-grid main .resto .menus .menu-standard .list-menus {
   align-items: center;
   justify-content: space-evenly;
-  gap: 30px;
-  margin: 10px;
+  gap: 10px;
+  margin: 5px;
 }
 .container-grid main .resto .menus .menu-standard .list-menus .entrance {
   display: flex;
   width: 100%;
-  height: 70px;
+  height: 60px;
   gap: 30px;
   margin-top: 50px;
   margin-bottom: 30px;
@@ -202,6 +202,7 @@ h2 {
   overflow: hidden;
   -webkit-animation: progress 3s;
           animation: progress 3s;
+  font-size: small;
 }
 .container-grid main .resto .menus .menu-standard .list-menus .entrance .text-restaurant {
   white-space: nowrap;
@@ -223,7 +224,7 @@ h2 {
 }
 .container-grid main .resto .menus .menu-standard .list-menus .entrance .price {
   margin-left: auto;
-  padding: 15px 0 20px 15px;
+  padding: 15px 0 10px 15px;
   font-weight: 900;
   display: flex;
   align-items: flex-end;
@@ -235,7 +236,7 @@ h2 {
   background-color: #99E2D0;
   margin-right: -65px;
   min-width: 65px;
-  height: 70px;
+  height: 60px;
   border-radius: 0 20px 20px 0;
   transition: all 0.5s;
   flex-grow: 0;
@@ -302,7 +303,7 @@ h2 {
   width: 100%;
 }
 
-@media screen and (min-width: 993px) and (max-width: 1430px) {
+@media screen and (min-width: 1325px) and (max-width: 1501px) {
   .container-grid {
     display: flex;
     flex-direction: column;
@@ -343,8 +344,8 @@ h2 {
   }
   .container-grid main .resto .menus .menu-standard .list-menus .entrance {
     width: 100%;
-    height: 140px;
-    font-size: medium;
+    height: 70px;
+    font-size: small;
     white-space: nowrap;
     overflow: hidden;
   }
@@ -352,7 +353,7 @@ h2 {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding: 50px 50px 50px 0;
+    padding: 20px 20px 20px 0;
   }
   .container-grid main .resto .menus .menu-standard .list-menus .entrance .text-restaurant h3 {
     text-overflow: ellipsis;
@@ -368,7 +369,7 @@ h2 {
   }
   .container-grid main .resto .menus .menu-standard .list-menus .entrance .price {
     margin-left: auto;
-    padding: 15px 0 45px 15px;
+    padding: 15px 0 25px 15px;
     font-weight: 900;
     display: flex;
     align-items: flex-end;
@@ -380,13 +381,13 @@ h2 {
     background-color: #99E2D0;
     margin-right: -65px;
     width: 65px;
-    height: 140px;
+    height: 70px;
     border-radius: 0 20px 20px 0;
     transition: all 0.5s;
     flex-shrink: 0;
   }
 }
-@media screen and (min-width: 769px) and (max-width: 992px) {
+@media screen and (min-width: 912px) and (max-width: 1324px) {
   .container-grid {
     display: flex;
     flex-direction: column;
@@ -430,7 +431,7 @@ h2 {
   }
   .container-grid main .resto .menus .menu-standard .list-menus .entrance {
     width: 100%;
-    height: 140px;
+    height: 90px;
     font-size: medium;
     white-space: nowrap;
     overflow: hidden;
@@ -439,7 +440,8 @@ h2 {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding: 50px 50px 50px 0;
+    padding: 30px 30px 30px 0;
+    font-size: small;
   }
   .container-grid main .resto .menus .menu-standard .list-menus .entrance .text-restaurant h3 {
     text-overflow: ellipsis;
@@ -455,7 +457,7 @@ h2 {
   }
   .container-grid main .resto .menus .menu-standard .list-menus .entrance .price {
     margin-left: auto;
-    padding: 15px 0 45px 15px;
+    padding: 15px 0 25px 15px;
     font-weight: 900;
     display: flex;
     align-items: flex-end;
@@ -467,7 +469,7 @@ h2 {
     background-color: #99E2D0;
     margin-right: -65px;
     width: 65px;
-    height: 140px;
+    height: 90px;
     border-radius: 0 20px 20px 0;
     transition: all 0.5s;
     flex-shrink: 0;
@@ -495,7 +497,7 @@ h2 {
     width: 100%;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 573px) and (max-width: 911px) {
   .container-grid {
     display: flex;
     flex-direction: column;
@@ -540,8 +542,8 @@ h2 {
   }
   .container-grid main .resto .menus .menu-standard .list-menus .entrance {
     width: 100%;
-    height: 140px;
-    font-size: x-large;
+    height: 100px;
+    font-size: medium;
     white-space: nowrap;
     overflow: hidden;
   }
@@ -549,7 +551,120 @@ h2 {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding: 50px 50px 50px 0;
+    padding: 30px 30px 30px 0;
+  }
+  .container-grid main .resto .menus .menu-standard .list-menus .entrance .text-restaurant h3 {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-left: 10px;
+  }
+  .container-grid main .resto .menus .menu-standard .list-menus .entrance .text-restaurant p {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-left: 10px;
+  }
+  .container-grid main .resto .menus .menu-standard .list-menus .entrance .price {
+    margin-left: auto;
+    padding: 15px 0 30px 15px;
+    font-weight: 900;
+    display: flex;
+    align-items: flex-end;
+  }
+  .container-grid main .resto .menus .menu-standard .list-menus .entrance .check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #99E2D0;
+    margin-right: -65px;
+    width: 65px;
+    height: 140px;
+    border-radius: 0 20px 20px 0;
+    transition: all 0.5s;
+    flex-shrink: 0;
+  }
+  .container-grid main .resto .command {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .container-grid main .resto .command button {
+    border: 0;
+    line-height: 2.5;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 40px;
+    align-items: center;
+    background: linear-gradient(#FF79DA, #9356DC);
+    margin: 15px;
+  }
+  .container-grid footer {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 572px) {
+  .container-grid {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+  }
+  .container-grid main {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .container-grid main .resto {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .container-grid main .resto h1 {
+    font-size: larger;
+  }
+  .container-grid main .resto .menus {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+    padding-top: 80px;
+  }
+  .container-grid main .resto .menus .menu-standard {
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    gap: 30px;
+    margin: 10px;
+  }
+  .container-grid main .resto .menus .menu-standard h3 {
+    margin-left: 0px;
+  }
+  .container-grid main .resto .menus .menu-standard .list-menus {
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 30px;
+    margin: 0px;
+    margin-right: 20px;
+  }
+  .container-grid main .resto .menus .menu-standard .list-menus .entrance {
+    width: 100%;
+    height: 80px;
+    font-size: x-small;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .container-grid main .resto .menus .menu-standard .list-menus .entrance .text-restaurant {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 20px 20px 0 0;
   }
   .container-grid main .resto .menus .menu-standard .list-menus .entrance .text-restaurant h3 {
     text-overflow: ellipsis;
