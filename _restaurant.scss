@@ -111,6 +111,8 @@ h2{
                         gap: 10px;
                         margin: 10px;
 
+                        
+
                         h2{
                             margin-left: 10px;
                             text-transform: uppercase;
@@ -134,7 +136,7 @@ h2{
                             justify-content: space-evenly;
                             gap: 10px;
                             margin: 5px;
-
+               
                             .entrance{
                                 display: flex;
                                 width: 100%;
@@ -147,10 +149,9 @@ h2{
                                 box-shadow : 5px 5px 5px lightgrey;
                                 white-space: nowrap;
                                 overflow: hidden;  
-                                animation: progress 3s;
+                                animation: progress 5s;
                                 font-size: small;
 
-                                                                                    
                             
                                 .text-restaurant{
                                     white-space: nowrap;
